@@ -1,4 +1,6 @@
+import { Transaction } from "@/components/datatable";
 import { createClient } from "../supabase/client";
+import { Database } from "@/types/supabase";
 
 interface CategoryTotals {
   [key: string]: number;
@@ -36,7 +38,7 @@ const getTransactions = async () => {
   };
 
   transactions?.forEach((transaction) => {
-    const categoryName = transaction.tags?.categories?.name;
+    const categoryName = transaction?.tags?.categories?.name;
 
     if (categoryName !== null && categoryName !== undefined) {
       const amount = transaction.amount ?? 0;

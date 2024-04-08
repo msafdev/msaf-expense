@@ -111,21 +111,19 @@ export function DataTableDemo() {
         const { transactions } = await getTransactions();
 
         if (transactions) {
-          const formattedTransactions: Transaction[] = transactions.map(
-            (transaction: any) => ({
-              amount: transaction.amount ?? 0,
-              date: transaction.date ?? "",
-              tags: {
-                id: transaction.tags?.id ?? 0,
-                name: transaction.tags?.name ?? "",
-                categories: {
-                  id: transaction.tags?.categories?.id ?? 0,
-                  name: transaction.tags?.categories?.name ?? "",
-                },
-                category_id: transaction.tags?.category_id ?? 0,
+          const formattedTransactions = transactions.map((transaction) => ({
+            amount: transaction.amount ?? 0,
+            date: transaction.date ?? "",
+            tags: {
+              id: transaction.tags?.id ?? 0,
+              name: transaction.tags?.name ?? "",
+              categories: {
+                id: transaction.tags?.categories?.id ?? 0,
+                name: transaction.tags?.categories?.name ?? "",
               },
-            })
-          );
+              category_id: transaction.tags?.category_id ?? 0,
+            },
+          }));
 
           setData(formattedTransactions);
         }
