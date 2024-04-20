@@ -34,7 +34,7 @@ const ModalButton = () => {
         <Plus size={16} />
         <span>Add</span>
       </DrawerTrigger>
-      <DrawerContent className="border-border flex flex-col items-center h-full md:h-fit">
+      <DrawerContent className="border-border flex flex-col items-center h-fit">
         <DrawerHeader className="max-w-sm w-full mt-auto">
           <DrawerTitle>Add a new transaction</DrawerTitle>
           <DrawerDescription>This action cannot be undone.</DrawerDescription>
