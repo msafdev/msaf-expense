@@ -35,8 +35,6 @@ export async function addTransaction(formData: FormData) {
   if (error) {
     console.error("Error inserting data", error);
     return;
-  } else {
-    console.log(data);
   }
 
   revalidatePath("/");

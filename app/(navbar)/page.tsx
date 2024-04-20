@@ -43,7 +43,7 @@ export default function Index() {
     <section id="wallet" className="flex flex-col pad-x">
       {/* Overview */}
       <div className="flex items-center justify-between gap-x-4">
-        <h1 className="text-4xl font-bold text-foreground">Wallet</h1>
+        <div className="text-3xl font-semibold text-foreground">Wallet</div>
         <Select>
           <SelectTrigger className="focus:ring-0 w-28 md:w-[180px] border-0 shadow-none">
             <SelectValue placeholder="Year" />
