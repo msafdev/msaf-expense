@@ -46,7 +46,7 @@ const ModalButton = () => {
           >
             <div className="flex items-center gap-x-2">
               <Input
-                className="w-full"
+                className="w-full text-lg placeholder:text-lg"
                 name="amount"
                 id="amount"
                 type="number"
